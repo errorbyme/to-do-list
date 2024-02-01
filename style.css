@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none !important;
+    font-family:'Poppins';
+}
+.container-fluid{
+    width: 100%;
+    height: 100vh;
+}
+.todo-app .todo-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    height: 70px;
+}
+.todo-app .todo-heading h1{
+    color: green;
+    font-weight: bolder;
+}
+.todo-app .todo-heading img{
+    padding: 5px;
+}
+.todo-app .typingBox{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.todo-app .typingBox input{
+    border: 1px solid green;
+}
+.list-group{
+    max-height: 300px;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    border: 2px solid green;
+}
+.list-group .list-group-item{
+    border: none;
+    position: relative;
+    padding-left: 60px;
+}
+.list-group .list-group-item hr{
+    margin: 3px 0;
+    color: green;
+}
+.list-group .list-group-item::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(imgs/circle_7022209.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    left: 10px;
+}
+.list-group .list-group-item i{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    right: 30px;
+    padding: 3px;
+    font-weight: bolder;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: green;
+}
+.list-group::-webkit-scrollbar{
+    width: 0;
+}
+.list-group .list-group-item.checked{
+    color: grey;
+    text-decoration: line-through;
+}
+.list-group .list-group-item.checked::before{
+    background-image: url(imgs/check.png);
+}
